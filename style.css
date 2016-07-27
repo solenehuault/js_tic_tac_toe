@@ -1,10 +1,22 @@
-table, td {
-  border: 2px solid black;
+#board,
+td {
+	border: 2px solid black;
 	border-collapse: collapse;
 	text-align: center;
 }
 
 td {
-	width: 70px;
-	height: 70px;
+	width: 100px;
+	height: 100px;
+}
+
+#menu {
+	height: 292px;
+	width: 292px;
+	margin: 8px;
+	display: none;
+	position: absolute;
+	border: grey 3px solid;
+	background-color: #eee;
+	text-align: center;
 }
