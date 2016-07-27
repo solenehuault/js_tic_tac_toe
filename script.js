@@ -85,6 +85,8 @@ function display_menu() {
 //function clear board
 function clear() {
 	$("td").text("");
+	table = [];
+	table.length = 9;
 };
 
 $("#new_game").click(function() {
