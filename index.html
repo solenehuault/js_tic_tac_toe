@@ -10,7 +10,10 @@
 	<h1>Tic Tac Toe</h1>
 	<h2>Joueur 1 : x</h2>
 	<div id="menu">
-		<p>Pause</p>
+		<p class="underline">Pause</p>
+		<h4>Score :</h4>
+		<p id="score1">Joueur1: 0</p>
+		<p id="score2">Joueur2: 0</p>
 		<button id="new_game">Nouvelle Partie</button>
 	</div>
 	<table id="board">
@@ -30,7 +33,7 @@
 			<td id="8" onclick="set_section(this)"></td>
 		</tr>
 	</table>
-	<p>Appuyer sur entrée pour ouvrir le menu.</p>
+	<p>Appuyer sur une touche pour ouvrir le menu.</p>
 	<script src="jquery.js"></script>
 	<script src="script.js"></script>
 </body>

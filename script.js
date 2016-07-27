@@ -3,6 +3,8 @@ var get_id; //get the id of a section of the board
 var table = []; //keep the borad in memory
 table.length = 9;
 var show_menu = false;
+var score_p1 = 0;
+var score_p2 = 0;
 
 //Put a cross or a circle to the clicked section of the board
 function set_section(target) {
@@ -19,11 +21,11 @@ function set_section(target) {
 function change_player() {
 	if (play == "x") {
 		play = "o";
-		$("h2").text("Player 2 : " + play);
+		$("h2").text("Joueur 2 : " + play);
 	}
 	else {
 		play = "x";
-		$("h2").text("Player 1 : " + play);
+		$("h2").text("Joueur 1 : " + play);
 	}
 };
 
@@ -65,8 +67,12 @@ function check_winner() {
 
 //display the winner
 function won() {
-	var winner = play == "x" ? "player1" : "player2";
-	alert(winner + " won");
+	var winner = play == "x" ? "Joueur1" : "Joueurr2";
+	alert(winner + " a gagné !");
+	if (winner == "Joueur1") {score_p1++;}
+	else {score_p2++;}
+	$("#score1").text("Joueur1: " + score_p1);
+	$("#score2").text("Joueur2: " + score_p2);
 	display_menu();
 }
 
